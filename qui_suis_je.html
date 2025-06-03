@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, follow" />
+    <title>Comité plume doréé</title>
+	<meta name="keywords" content="plume dorée, comité, romans policiers français, histoires, offrir" />
+    
+    <!-- Métadonnées de base -->
+    <meta name="description" content="Découvrez l'univers de Daniel Iglesias : polars percutants, mystères sombres, âmes torturées. Plongez dans Overdose d'amour, Enseigner en saignant, À la mémoire du crime, et bien plus." />
+    <meta name="author" content="Daniel Iglesias" />
+    <meta name="language" content="fr" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Comité plume dorée" />
+    <meta property="og:description" content="Découvrez l'univers de Daniel Iglesias : polars percutants, mystères sombres, âmes torturées. Plongez dans Overdose d'amour, Enseigner en saignant, À la mémoire du crime, et bien plus." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://comiteplumedoree.github.io" />
+    <meta property="og:image" content="images/og-image.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Comité plume dorée" />
+    <meta name="twitter:description" content="Découvrez l'univers de Daniel Iglesias : polars percutants, mystères sombres, âmes torturées. Plongez dans Overdose d'amour, Enseigner en saignant, À la mémoire du crime, et bien plus." />
+    <meta name="twitter:image" content="images/og-image.jpg" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Font Awesome pour icônes sociales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Fichier CSS externe -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Bandeau fixe en haut -->
+    <div class="bandeau">
+	    <!-- Bouton burger -->
+  <div class="burger-menu" id="burger" aria-label="Menu" role="button" tabindex="0">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+        <nav>
+            <!-- Menu -->
+  <div class="menu-drawer" id="menuDrawer">
+    <ul class="menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li>
+        <a href="#">Conseils</a>
+        <ul class="submenu">
+          <li><a href="#livre1">Overdose d'amour</a></li>
+          <li><a href="#livre2">Expérience</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Services</a>
+        <ul class="submenu">
+          <li><a href="qui_suis_je.html">Qui suis-je?</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+        </nav>
+    </div>
+
+    <!-- Contenu principal -->
+    <div class="content">
+        <!-- Introduction -->
+        <section class="intro">
+            <header>
+                         <img src="images./header.png" alt="Logo" style="height:400px;">
+                </header>
+    </div>
+
+    <!-- Contenu principal -->
+    <main class="content">
+        <!-- Introduction -->
+        <section class="intro">
+            <h1>Daniglesias</h1>
+            <h3>Blog littéraire</h3>
+            <h4>Qui suis-je ?</h4>
+            <p>
+                Bienvenue sur mon blog !<br><br>
+                Je suis Daniel Iglesias, un passionné des mots et de la transmission. Après deux décennies dédiées à l'enseignement du français et de l'espagnol, où j'ai eu le privilège de guider de jeunes esprits et de partager la richesse de ces langues, ma soif de raconter s'est étendue bien au-delà des salles de classe.<br><br>
+                En parallèle de ma carrière d'enseignant, j'ai embrassé l'univers de l'écriture, explorant les méandres du roman policier et les horizons lointains des récits d'aventure. Chaque page est pour moi une nouvelle exploration, un voyage au cœur de l'imaginaire.<br><br>
+                Aujourd'hui, je suis fier de vous annoncer que je suis en pleine rédaction de mon cinquième livre, une nouvelle étape dans cette aventure littéraire qui me passionne tant.<br><br>
+                À travers ce blog, j'espère partager avec vous mes réflexions, mes inspirations, et les coulisses de mon travail d'écrivain. N'hésitez pas à me suivre dans cette belle aventure !
+            </p>
+        </section>
+    </main>   
+    <!-- Pied de page -->
+    <footer id="footer">
+        <p>&copy; 2025 comiteplumedoree.free.nf Tous droits réservés. Design et contenu crée par le Comité Plume dorée.</p>
+        <!-- Boutons sociaux -->
+        <div class="social-buttons">
+            <!-- Facebook -->
+            <a class="social-btn facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Foffrirunehistoire.onlinewebshop.net%2F" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-facebook-f"></i> Facebook
+            </a>
+            <!-- Twitter -->
+            <a class="social-btn twitter" href="https://twitter.com/intent/tweet?text=Découvrez%20ce%20site%20fantastique%20https%3A%2F%2Foffrirunehistoire.onlinewebshop.net%2F" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-twitter"></i> Twitter
+            </a>
+        </div>
+    </footer>
+	<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const burger = document.getElementById('burger');
+  const menuDrawer = document.getElementById('menuDrawer');
+
+  burger.addEventListener('click', () => {
+    menuDrawer.classList.toggle('active');
+  });
+
+  // Fermer si clic en dehors
+  document.addEventListener('click', (e) => {
+    if (!menuDrawer.contains(e.target) && !burger.contains(e.target)) {
+      menuDrawer.classList.remove('active');
+    }
+  });
+});
+</script>
+</body>
+</html>
