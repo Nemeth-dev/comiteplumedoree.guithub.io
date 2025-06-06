@@ -316,7 +316,6 @@ form {
     display: flex; /* Flex pour disposition verticale */
     flex-direction: column; /* Colonne */
 }
-
 /* Labels du formulaire */
 label {
     margin-bottom: 8px; /* Espace en dessous */
