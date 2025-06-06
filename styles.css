@@ -18,6 +18,7 @@ header {
     text-align: center;        /* Centrer le texte */
     color: white;              /* Couleur du texte */
     font-size: 24px;           /* Taille de la police */
+	margin-top:70px;
 }
 
 /* Bandeau fixe en haut de la page */
