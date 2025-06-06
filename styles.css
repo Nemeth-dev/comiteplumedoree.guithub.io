@@ -304,6 +304,7 @@ body {
     width: 100%; /* Prend toute la largeur disponible */
     box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Ombre légère */
     margin: auto; /* Centrage horizontal et vertical */
+	margin-top:80px;
 }
 
 /* Titre du formulaire */
