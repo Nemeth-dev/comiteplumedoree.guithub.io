@@ -1,57 +1,57 @@
 /* Style général du corps */
 body {
-	position: relative;
-    z-index: auto;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Police de caractères de base */
-    background-color: #fffaf0; /* Fond champagne léger */
-    color: #ddd; /* Couleur du texte gris clair */
+    position: relative; /* Positionnement relatif pour les enfants positionnés absolument si besoin */
+    z-index: auto; /* Z-index par défaut */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Police de caractères principale */
+    background-color: #fffaf0; /* Fond couleur champagne léger */
+    color: #ddd; /* Couleur du texte gris clair par défaut */
     line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
     margin: 0; /* Enlève la marge par défaut du corps */
-    display: flex; /* Utilise Flexbox pour la mise en page */
+    display: flex; /* Utilise Flexbox pour la mise en page globale */
     flex-direction: column; /* Disposition verticale des éléments */
-    min-height: 100vh; /* Hauteur minimale pour couvrir toute la fenêtre */
+    min-height: 100vh; /* Hauteur minimale : toute la fenêtre */
 }
 
+/* Style du header */
 header {
-    background-color: #fffaf0; /* Fond champagne léger */
-    padding: 20px;             /* Espacement interne */
-    text-align: center;        /* Centrer le texte */
-    color: white;              /* Couleur du texte */
-    font-size: 24px;           /* Taille de la police */
-	margin-top:70px;
-	
+    background-color: #fffaf0; /* Même fond que le body, champagne léger */
+    padding: 20px; /* Espacement interne */
+    text-align: center; /* Centrer le texte */
+    color: white; /* Couleur du texte (peut sembler invisible sur fond blanc) */
+    font-size: 24px; /* Taille de la police */
+    margin-top: 70px; /* Espace au-dessus, pour décaler du haut fixe */
 }
 
 /* Bandeau fixe en haut de la page */
 .bandeau {
-    position: fixed; /* Fixe le header en haut de la fenêtre */
-    top: 0;
+    position: fixed; /* Fixe en haut de la fenêtre */
+    top: 0; /* Position en haut */
     width: 100%; /* Prend toute la largeur */
-    background-color: #8B5E3C; /* Couleur dorée foncée (brun doré) */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Ombre pour donner du relief */
-    z-index: 1000; /* Position au-dessus des autres éléments */
-    padding: 0.5rem 1rem; /* Espacement intérieur */
+    background-color: #8B5E3C; /* Brun doré foncé (brun chaud) */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Ombre pour relief */
+    z-index: 1000; /* Sur le reste du contenu */
+    padding: 0.5rem 1rem; /* Espacement interne */
 }
 
 /* Menu de navigation */
 nav {
-    display: flex; /* Flexbox pour aligner les items */
+    display: flex; /* Flexbox pour aligner les items horizontalement */
     justify-content: center; /* Centrer horizontalement */
     align-items: center; /* Centrer verticalement */
 }
 
-/* Liste du menu */
+/* Liste du menu principale */
 ul.menu {
-    list-style: none; /* Supprime les puces */
+    list-style: none; /* Supprimer les puces */
     display: flex; /* Disposition horizontale */
-    margin: 0; /* Supprime marges */
-    padding: 0; /* Supprime paddings */
+    margin: 0; /* Pas de marges */
+    padding: 0; /* Pas de padding */
 }
 
-/* Éléments du menu */
+/* Éléments de la liste du menu */
 ul.menu li {
-    position: relative; /* Nécessaire pour positionner le sous-menu */
-    margin: 0 15px; /* Espacement horizontal entre les items */
+    position: relative; /* Nécessaire pour positionner le sous-menu en absolu */
+    margin: 0 15px; /* Espacement horizontal entre items */
 }
 
 /* Liens du menu */
@@ -59,124 +59,126 @@ ul.menu li a {
     text-decoration: none; /* Pas de soulignement */
     color: #D4AF37; /* Doré */
     font-weight: bold; /* Gras */
-    padding: 8px 12px; /* Padding autour du texte */
+    padding: 8px 12px; /* Espacement autour du texte */
     transition: background 0.3s, color 0.3s; /* Transition douce pour hover */
 }
 
-/* Hover sur les liens du menu */
+/* Survol des liens du menu */
 ul.menu li a:hover {
-    background-color: rgba(212, 175, 55, 0.8); /* Doré semi-transparent */
+    background-color: rgba(212, 175, 55, 0.8); /* Doré semi-transparent au survol */
     border-radius: 4px; /* Coins arrondis */
-    color: #fff; /* Texte en blanc */
+    color: #fff; /* Texte blanc au hover */
 }
 
 /* Sous-menu déroulant */
 ul.menu li ul.submenu {
-    display: none; /* Caché par défaut */
-    position: absolute;
-    top: 30px; /* ajustez cette valeur selon le positionnement souhaité */
-    left: 0;
-    background-color: #8B5E3C; /* Couleur brun doré) */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 140px; /* largeur initiale */
-    border-radius: 4px;
-    z-index: 1001;
-    transition: width 0.3s ease; /* Ajout de la transition */
+    display: none; /* Cacher par défaut */
+    position: absolute; /* Positionnement absolu par rapport au li parent */
+    top: 30px; /* Position verticale par rapport au parent */
+    left: 0; /* Aligné à gauche du parent */
+    background-color: #8B5E3C; /* Même couleur que le bandeau */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5); /* Ombre pour relief */
+    list-style: none; /* Pas de puces */
+    padding: 0; /* Pas de padding */
+    margin: 0; /* Pas de marge */
+    width: 140px; /* Largeur initiale */
+    border-radius: 4px; /* Coins arrondis */
+    z-index: 1001; /* Sur le menu principal */
+    transition: width 0.3s ease; /* Transition pour changement de largeur */
 }
 
 /* Affichage du sous-menu au survol */
 ul.menu li:hover ul.submenu {
-    display: block; /* Affiche le sous-menu */
-	width: 200px; /* nouvelle largeur */
+    display: block; /* Afficher le sous-menu */
+    width: 200px; /* Augmentation de la largeur lors du survol */
 }
 
 /* Items du sous-menu */
 ul.submenu li {
-    width: 100%; /* Prend toute la largeur */
+    width: 100%; /* Prend toute la largeur du sous-menu */
 }
 
 /* Liens dans le sous-menu */
 ul.submenu li a {
-    padding: 4px 8px; /* augmenter légèrement pour un meilleur confort, ou réduire à 2px */
-    max-width: 180px; /* limite la largeur */
-    display: inline-block; /* pour respecter la largeur max */ /* Transition pour hover */
-	color: #fff; /* couleur blanche pour le texte */
-}
-
-/* Hover sur les liens du sous-menu */
-ul.submenu li a:hover {
-    background-color: rgba(212, 175, 55, 0.8); /* Couleur de survol dorée */
+    padding: 4px 8px; /* Padding pour confort */
+    max-width: 180px; /* Limite la largeur */
+    display: inline-block; /* Respecte la largeur max */
     color: #fff; /* Texte blanc */
 }
 
-/* container pricipale contient .intro  */
+/* Survol des liens du sous-menu */
+ul.submenu li a:hover {
+    background-color: rgba(212, 175, 55, 0.8); /* Couleur dorée au survol */
+    color: #fff; /* Texte blanc */
+}
+
+/* Container principal pour contenu */
 .content {
     margin: 0 auto; /* Centrage horizontal */
-	width: 100%; /* Assure que la div prend toute la largeur disponible */
+    width: 100%; /* Prend toute la largeur disponible */
 }
 
-/* Section présentation contenu dans .content */
+/* Section présentation dans .content */
 .intro {
-    width: 100%; /* Assure que la div prend toute la largeur disponible */
-    box-sizing: border-box; /* Inclut les marges et paddings dans la largeur totale */
+    width: 100%; /* Prend toute la largeur */
+    box-sizing: border-box; /* Inclut paddings et marges dans la largeur */
     text-align: center; /* Centrer le texte */
-    margin-bottom: 3rem; /* Espace inférieur */   
+    margin-bottom: 3rem; /* Espace inférieur */
 }
 
+/* Titre dans intro */
 .intro h1 {
     font-size: 2.5rem; /* Taille du titre */
     margin-bottom: 1rem; /* Marges en dessous */
-    color: black; /* Couleur noire */
+    color: black; /* Noir */
 }
 
+/* Paragraphe dans intro */
 .intro p {
-    font-size: 1.2rem; /* Taille du paragraphe */
-    max-width: 800px; /* Largeur maximale */
+    font-size: 1.2rem; /* Taille du texte */
+    max-width: 800px; /* Largeur maximale pour confort lecture */
     margin: 0 auto 1.5rem; /* Centré avec marge inférieure */
-    color: black; /* Couleur noire */
+    color: black; /* Noir */
 }
 
-/* Section livres (listes de livres) */
+/* Section livres, affichage flex pour mise en page en grille */
 .livres {
-    display: flex; /* Flexbox pour disposition */
-    flex-wrap: wrap; /* Wrap pour aller à la ligne si nécessaire */
-    gap: 20px; /* Espace entre les cartes */
+    display: flex; /* Flexbox */
+    flex-wrap: wrap; /* Permet de passer à la ligne */
+    gap: 20px; /* Espacement entre cartes */
     justify-content: center; /* Centrer horizontalement */
 }
 
 /* Carte d'un livre */
 .card {
-    background-color: #8B5E3C;; /* Brun chaud */
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.7);
-    width: 320px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    background-color: #8B5E3C; /* Brun chaud */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.7); /* Ombre pour effet 3D */
+    width: 320px; /* Largeur fixe */
+    display: flex; /* Flexbox pour aligner contenu vertical */
+    flex-direction: column; /* Disposition verticale */
+    align-items: center; /* Centrer horizontalement */
+    padding: 15px; /* Padding intérieur */
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Transitions pour effets au survol */
 }
 
-/* Effet au survol */
+/* Effet au survol de la carte */
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.9);
-    background-color: #A56F4A; /* nuance plus claire pour le survol */
+    transform: translateY(-5px); /* Légère élévation */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.9); /* Ombre plus accentuée */
+    background-color: #A56F4A; /* Nuance plus claire au survol */
 }
 
 /* Couverture du livre */
 .cover {
     width: 100%; /* Prend toute la largeur du container */
-    height: auto; /* Hauteur auto pour conserver aspect ratio */
+    height: auto; /* Maintient l'aspect ratio */
     border-radius: 4px; /* Coins arrondis */
     margin-bottom: 15px; /* Espace en dessous */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.5); /* Ombre sur l'image */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5); /* Ombre */
 }
 
-/* Description des livres */
+/* Description du livre */
 .description {
     text-align: center; /* Centrer le texte */
 }
@@ -194,77 +196,83 @@ ul.submenu li a:hover {
 
 /* Pied de page */
 footer {
-    width: 100%; /* Prend toute la largeur */
+    width: 100%; /* Toute la largeur */
     background-color: #141414; /* Couleur sombre */
-    padding: 20px 0; /* Padding vertical */
-    margin-top: 40px; /* Espace au-dessus */
-    text-align: center; /* Centrer le contenu */
-    font-size: 0.9rem; /* Taille du texte */
-    color: #777; /* Gris moyen */
+    padding: 5px 0; /* Padding vertical */
+    margin-top: 20px; /* Espace au-dessus */
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Disposition verticale */
+    align-items: center; /* Centrer contenu horizontal */
 }
 
-/* Définition d'une police personnalisée */
+/* Paragraphe dans le footer */
+footer p {
+    text-align: center; /* Centrer le texte */
+}
+
+/* Définition d'une police personnalisée pour titres */
 @font-face {
-    font-family: 'FairWaterScript';
-    src: url('fonts/FairWaterScript.woff2') format('woff2'),
-         url('fonts/FairWaterScript.woff') format('woff'),
-         url('fonts/FairWaterScript.ttf') format('truetype');
+    font-family: 'FairWaterScript'; /* Nom de la police */
+    src: url('fonts/FairWaterScript.woff2') format('woff2'), /* Fichier woff2 */
+         url('fonts/FairWaterScript.woff') format('woff'), /* Fichier woff */
+         url('fonts/FairWaterScript.ttf') format('truetype'); /* TTF fallback */
     font-weight: normal;
     font-style: normal;
 }
 
-/* Style pour les titres principaux */
+/* Style pour les titres principaux (h1) */
 h1 {
-    font-family: 'FairWaterScript', cursive, Arial, sans-serif; /* Police script personnalisée */
+    font-family: 'FairWaterScript', cursive, Arial, sans-serif; /* Police script + fallback */
     font-size: 3em; /* Taille importante */
     color: #222; /* Couleur sombre */
-    -webkit-text-stroke: 0.5px black; /* Contour noir pour le texte */
-    margin-bottom: 20px;
+    -webkit-text-stroke: 0.5px black; /* Contour noir pour un effet de style */
+    margin-bottom: 20px; /* Espace inférieur */
 }
 
-/* Style pour les sous-titres */
+/* Style pour les sous-titres (h3) */
 h3 {
-    font-family: 'FairWaterScript', cursive, Arial, sans-serif; /* Police script */
-    font-size: 1.5em; /* Taille */
-    color: #222; /* Couleur sombre */
-    -webkit-text-stroke: 0.5px black; /* Contour */
+    font-family: 'FairWaterScript', cursive, Arial, sans-serif;
+    font-size: 1.5em;
+    color: #222;
+    -webkit-text-stroke: 0.5px black;
     margin-bottom: 20px;
 }
 
-/* Style pour les petits titres */
+/* Style pour les petits titres (h4) */
 h4 {
-    font-family: 'FairWaterScript', cursive, Arial, sans-serif; /* Police script */
-    font-size: 1.2em; /* Taille */
-    color: #222; /* Couleur sombre */
-    -webkit-text-stroke: 0.5px black; /* Contour */
+    font-family: 'FairWaterScript', cursive, Arial, sans-serif;
+    font-size: 1.2em;
+    color: #222;
+    -webkit-text-stroke: 0.5px black;
     margin-bottom: 20px;
 }
+
 /* Image argentée spécifique */
 .image-argentee {
     border: 4px solid silver; /* Bordure argentée */
     width: 200px; /* Largeur fixe */
-    height: auto; /* Hauteur auto */
+    height: auto; /* Hauteur auto pour conserver aspect ratio */
 }
 
 /* Container pour les boutons sociaux */
 .social-buttons {
-    display: flex; /* Flex pour alignement */
+    display: flex; /* Flexbox pour aligner boutons */
     gap: 10px; /* Espacement entre boutons */
-    margin: 10px 0; /* Marges verticales */
+    margin: 0 0; /* Marges verticales nulles */
     justify-content: center; /* Centrer horizontalement */
     align-items: center; /* Centrer verticalement */
 }
 
 /* Styles communs pour tous les boutons sociaux */
 .social-btn {
-    display: flex; /* Flex pour aligner contenu */
+    display: flex; /* Flex pour aligner contenu interne */
     align-items: center; /* Centrer verticalement */
-    padding: 10px 15px; /* Padding intérieur */
+    padding: 0 15px; /* Padding horizontal réduit */
     font-size: 16px; /* Taille du texte */
-    color: #fff; /* Texte blanc */
+    color: #fff; /* Couleur blanche du texte */
     text-decoration: none; /* Pas de soulignement */
     border-radius: 5px; /* Coins arrondis */
-    transition: background-color 0.3s; /* Transition pour hover */
+    transition: background-color 0.3s; /* Transition pour changement de fond au hover */
 }
 
 /* Couleurs spécifiques pour chaque plateforme */
@@ -277,49 +285,42 @@ h4 {
 
 /* Effet au survol des boutons sociaux */
 .social-btn:hover {
-    opacity: 0.8; /* Opacité réduite */
+    opacity: 0.8; /* Légère transparence au survol */
 }
 
 /* Icônes dans les boutons sociaux */
 .social-btn i {
-    margin-right: 8px; /* Espace entre l'icône et le texte */
-    font-size: 20px; /* Taille de l'icône */
-}
-
-/* Formulaire de contact - mise en page centrée avec flexbox */
-body {
-    /* Déjà défini précédemment, répété ici pour contexte */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    margin-right: 8px; /* Espace entre icône et texte */
+    font-size: 20px; /* Taille des icônes */
 }
 
 /* Conteneur du formulaire de contact */
 .contact-container {
     background-color: #8B5E3C; /* Brun chaud */
-    color: #D4AF37; /* Doré */	
-    padding: 40px; /* Padding intérieur */
+    color: #D4AF37; /* Doré */
+    padding: 40px; /* Padding interne */
     border-radius: 10px; /* Coins arrondis */
     max-width: 500px; /* Largeur maximale */
     width: 100%; /* Prend toute la largeur disponible */
     box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Ombre légère */
     margin: auto; /* Centrage horizontal et vertical */
-	margin-top:80px;
+    margin-top: 80px; /* Espace au-dessus */
 }
 
 /* Titre du formulaire */
 h2 {
     text-align: center; /* Centrer le texte */
-    color: #D4AF37; /* Doré  */
+    color: #D4AF37; /* Doré */
     margin-bottom: 20px; /* Espace inférieur */
     font-size: 2em; /* Taille du titre */
 }
 
-/* Forme de la zone de saisie */
+/* Formulaire */
 form {
-    display: flex; /* Flex pour disposition verticale */
+    display: flex; /* Flexbox pour disposition verticale */
     flex-direction: column; /* Colonne */
 }
+
 /* Labels du formulaire */
 label {
     margin-bottom: 8px; /* Espace en dessous */
@@ -327,7 +328,7 @@ label {
     color: #fff; /* Blanc */
 }
 
-/* Champs de texte, email et textarea */
+/* Champs de saisie (text, email, textarea) */
 input[type="text"],
 input[type="email"],
 textarea {
@@ -335,16 +336,16 @@ textarea {
     margin-bottom: 20px; /* Espace en dessous */
     border: 1px solid #ccc; /* Bordure grise claire */
     border-radius: 4px; /* Coins arrondis */
-    font-family: inherit; /* Hérite de la police du parent */
+    font-family: inherit; /* Héritage de la police */
     font-size: 1em; /* Taille du texte */
     transition: border-color 0.3s; /* Transition pour changement de bordure */
 }
 
-/* Focus sur les champs de saisie */
+/* Focus sur champs de saisie */
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-    border-color: #D4AF37; /* Effet halo doré */ 
+    border-color: #D4AF37; /* Bordure dorée lors du focus */
     outline: none; /* Pas de contour par défaut */
 }
 
@@ -357,198 +358,245 @@ button {
     border-radius: 4px; /* Coins arrondis */
     font-size: 1em; /* Taille du texte */
     cursor: pointer; /* Curseur pointeur */
-    transition: background-color 0.3s; /* Transition pour hover */
+    transition: background-color 0.3s; /* Transition de fond */
 }
 
-/* Hover sur le bouton */
+/* Survol du bouton */
 button:hover {
-    background-color: #b8962f; /* Ton plus foncé pour hover */
+    background-color: #b8962f; /* Ton plus foncé en hover */
 }
 
-/* Message de confirmation ou erreur */
+/* Message de confirmation ou d'erreur */
 .message {
     margin-top: 15px; /* Espace supérieur */
-    text-align: center; /* Centré */
+    text-align: center; /* Centrer le texte */
     font-weight: bold; /* Gras */
 }
 
 /* Liens classiques */
 a {
-    text-decoration: none;
-    color: #4B3832;
+    text-decoration: none; /* Pas de soulignement */
+    color: #4B3832; /* Couleur brune */
 }
 
-/* Style pour le bouton burger */
+/* Paragraphes */
+p {
+    max-width: 700px; /* Largeur maximale pour une lecture confortable */
+    margin: 20px auto; /* Centré avec marges verticales */
+    font-size: 18px; /* Taille confortable */
+    line-height: 1.8; /* Espacement pour lecture aisée */
+    color: #444; /* Couleur légèrement sombre */
+    text-align: justify; /* Justification du texte */
+    /* Ajout d'une légère ombre pour relief */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+/* Paragraphe d'introduction (exemple) */
+p.intro {
+    font-weight: bold; /* Texte en gras */
+    font-size: 20px; /* Taille légèrement plus grande */
+    color: #222; /* Couleur très sombre */
+    margin-bottom: 30px; /* Espace en dessous */
+}
+
+/* Citations ou extraits */
+p.quote {
+    font-style: italic; /* Italique */
+    background-color: #eef9f9; /* Fond léger */
+    padding: 15px; /* Padding intérieur */
+    border-left: 5px solid #a0c4c4; /* Bande à gauche */
+    margin: 30px 0; /* Marges verticales */
+    border-radius: 8px; /* Coins arrondis */
+    font-size: 19px; /* Taille du texte */
+}
+
+/* Bouton burger menu (pour mobile) */
 .burger-menu {
-  width: 30px;
-  height: 25px;
-  cursor: pointer;
-  display: none; /* Masqué sur grand écran, visible en mobile */
-  flex-direction: column;
-  justify-content: space-between;
-  z-index: 1001; /* Au-dessus du menu */
+    width: 30px;
+    height: 25px;
+    cursor: pointer; /* Curseur pointeur */
+    display: none; /* Masqué sur grand écran, visible en mobile */
+    flex-direction: column; /* Colonnes pour les barres */
+    justify-content: space-between; /* Espacement entre les barres */
+    z-index: 1001; /* Sur le dessus */
 }
 .burger-menu .bar {
-  height: 3px;
-  background-color: #fff; /* Couleur blanc ou selon votre thème */
-  border-radius: 2px;
-  width: 100%;
-  transition: 0.3s;
+    height: 3px; /* Hauteur des barres */
+    background-color: #fff; /* Couleur blanc ou selon thème */
+    border-radius: 2px; /* Coins arrondis */
+    width: 100%; /* Prend toute la largeur du burger */
+    transition: 0.3s; /* Transition pour effet */
 }
-
 
 /* ------------------------------------------- FIN DES STYLES GLOBAUX ------------------------------------------- */
 
-/* =========================== STYLES RESPONSIVE =========================== */
+/* =========================== STYLES RESPONSIVE (pour mobiles et petits écrans) =========================== */
 
-
-/* Responsive pour petits écrans */
+/* Responsive pour petits écrans (max 600px) */
 @media (max-width: 600px) {
-    /* Réduction du padding du conteneur */
+    /* Réduction du padding dans le conteneur contact */
     .contact-container {
         padding: 20px;
     }
 }
-/* Styles pour la responsivité */
+
+/* Responsive pour écrans jusqu'à 768px */
 @media(max-width: 768px) {
-    /* Sur petits écrans, la section livres devient verticale */
+    /* La section livres devient colonne (verticale) */
     .livres {
         flex-direction: column;
         align-items: center;
     }
-    /* La taille des cartes s'adapte */
+    /* Les cartes des livres s'adaptent en largeur */
     .card {
         width: 90%;
     }
-    /* Adaptation du header */
+    /* Ajustement du header */
     header {
         padding: 0.5rem 1rem;
     }
-    /* Taille du titre dans intro */
+    /* Padding pour intro */
+    .intro {
+        padding: 20px;
+        box-sizing: border-box; /* Inclure paddings dans la largeur */
+    }
+    /* Taille du titre dans intro réduit pour mobile */
     .intro h1 {
         font-size: 2rem;
     }
+    /* Affichage du burger menu en mobile */
+    .burger-menu {
+        display: flex !important; /* S'assurer qu'il s'affiche */
+        position: fixed; /* Toujours en haut à droite */
+        top: 15px;
+        right: 20px;
+        width: 35px;
+        height: 30px;
+        flex-direction: column;
+        justify-content: space-around; /* Espacement entre barres */
+        align-items: center;
+        cursor: pointer;
+        z-index: 9999; /* Très élevé pour être au-dessus */
+        background: transparent; /* Pas de fond */
+    }
+    /* Structure des barres du burger */
+    .burger-menu .bar {
+        height: 4px; /* Plus épaisses */
+        width: 100%;
+        background-color: #fff; /* Blanc */
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+    /* Menu déroulant en mobile */
+    .menu-drawer {
+        position: absolute; /* Position absolue */
+        top: calc(100% + 20px); /* Juste en dessous du burger */
+        right: 20px; /* Aligné à droite */
+        width: 250px; /* Largeur du menu */
+        background-color: #8B5E3C; /* Couleur du menu */
+        box-shadow: 0 2px 8px rgba(0,0,0,0.5); /* Ombre */
+        display: none; /* Caché par défaut */
+        border-radius: 4px; /* Coins arrondis */
+        z-index: 1002; /* Sur le burger et autres éléments */
+    }
+    /* Menu actif en mobile */
+    .menu-drawer.active {
+        display: block; /* Afficher quand actif */
+    }
+    /* Adaptation du menu principal pour mobile */
+    .netflix-menu .menu {
+        list-style: none;
+        padding: 0 20px;
+        margin: 0;
+    }
+    /* Liens dans le menu mobile */
+    .netflix-menu .menu li {
+        margin: 20px 0;
+    }
+    /* Liens dans le menu mobile */
+    .netflix-menu .menu li a {
+        color: #fff;
+        font-size: 1.2em;
+        text-decoration: none;
+    }
+    /* Position fixe du burger */
+    #burger {
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        display: flex !important; /* S'assurer qu'il s'affiche */
+    }
+    /* Menu déroulant mobile */
+    .menu {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+    /* Espacement entre liens dans menu mobile */
+    .menu li {
+        margin: 20px 0;
+    }
+    /* Sous-menu dans mobile si nécessaire */
+    ul.submenu {
+        position: absolute;
+        top: 0; /* Positionné par rapport à son parent */
+        right: 60px; /* Ajusté selon besoin */
+        width: 200px;
+        background-color: #8B5E3C;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        display: none; /* Peut être modifié pour toujours visible si souhaité */
+        z-index: 1002;
+        color: #fff; /* Couleur du texte */
+    }
+    /* Cacher le menu principal dans le header en mobile */
+    .menu-container {
+        display: none;
+    }
+    /* Afficher le burger menu en mobile */
+    .burger-menu {
+        display: flex !important; /* Toujours visible en mobile */
+        position: fixed; /* Fixé en haut à droite */
+        top: 15px;
+        right: 20px;
+        width: 35px;
+        height: 30px;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        cursor: pointer;
+        z-index: 9999;
+        background: transparent;
+    }
+    /* Barres du burger plus épaisses */
+    .burger-menu .bar {
+        height: 4px; /* Épaissies */
+        width: 100%;
+        background-color: #fff;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+    /* Menu déroulant en dehors, positionné */
+    .menu-drawer {
+        position: absolute; /* En dehors du flux normal */
+        top: calc(100% + 20px);
+        right: 20px;
+        width: 250px;
+        background-color: #8B5E3C;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        display: none; /* Caché par défaut */
+        border-radius: 4px;
+        z-index: 1002;
+    }
+    /* Menu actif en mobile */
+    .menu-drawer.active {
+        display: block; /* Visible quand actif */
+    }
+    /* Bandeau en mobile peut avoir une hauteur spécifique */
+    .bandeau {
+        height: 40px;
+        line-height: 40px;
+        display: flex;
+        align-items: center;
+    }
 }
-
-/* Afficher le burger sur mobile */
-@media (max-width: 768px) {
-  .burger-menu {
-    display: flex;
-  }
-  /* Masquer le menu par défaut sur mobile */
-.menu-container {
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 300px;
-    background-color: rgba(0, 0, 0, 0.95);
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
-    z-index: 1000;
-    padding-top: 60px; /* espace pour le burger */
-  }
-
-  /* Menu visible quand actif */
-  .menu-container.active {
-    transform: translateX(0);
-  }
-
-  /* Style du menu (liens, etc.) */
-  .netflix-menu .menu {
-    list-style: none;
-    padding: 0 20px;
-    margin: 0;
-  }
-  .netflix-menu .menu li {
-    margin: 20px 0;
-  }
-  .netflix-menu .menu li a {
-    color: #fff;
-    font-size: 1.2em;
-    text-decoration: none;
-  }
-  #burger {
-    position: fixed;
-    top: 15px;
-    right: 20px;
-    display: flex;!important; /* pour s'assurer qu'il s'affiche */
-  }
-  .menu {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-  }
-
-  /* Espacement entre liens */
-  .menu li {
-    margin: 20px 0;
-  }
-
-
-  /* Rendre le sous-menu visible en mobile (si besoin) */
-  ul.submenu {
-    position: absolute;
-    top: 0px; /* position 20px en dessous du header */
-    right: 60px; /* 20px du bord droit */
-    width: 200px; /* ou ajustez selon besoin */
-    background-color: #8B5E3C; /* Couleur brun doré) */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-    display: none; /* ou block si vous souhaitez qu'il soit toujours visible */
-    z-index: 1002;	
-    color: #fff; /* couleur blanche pour le texte */
-  }
-   /* cache le menu principal dans header */
-  .menu-container {
-    display: none;
-  }
-
-  /* affiche le burger */
-  .burger-menu {
-    display: flex !important;
-    position: fixed;
-    top: 15px;
-    right: 20px;
-    width: 35px;
-    height: 30px;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    cursor: pointer;
-    z-index: 9999; /* très élevé pour être sûr qu'il est au-dessus */
-    background: transparent;
-  }
-  
-  /* Les barres du burger, plus épaisses et visibles */
-  .burger-menu .bar {
-    height: 4px;
-    width: 100%;
-    background-color: #fff;
-    border-radius: 2px;
-    transition: 0.3s;
-  }
-  /* menu déroulant en dehors, positionné */
-  .menu-drawer {
-    position: absolute;
-    top: calc(100% + 20px);
-    right: 20px;
-    width: 250px;
-    background-color: #8B5E3C; /* Couleur brun doré) */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-    display: none;
-    border-radius: 4px;
-    z-index: 1002;
-  }
-
-  .menu-drawer.active {
-    display: block;
-  }
-  
-  .bandeau {
-    height: 40px;
-    line-height: 40px;
-    display: flex;
-    align-items: center;
-  } 
-}
-
