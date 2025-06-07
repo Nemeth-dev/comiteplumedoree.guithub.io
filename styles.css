@@ -468,10 +468,7 @@ p.quote {
     .card {
         width: 90%;
     }
-    /* Ajustement du header */
-    header {
-        padding: 0.5rem 1rem;
-    }
+    
     /* Padding pour intro */
     .intro {
         padding: 20px;
@@ -616,4 +613,13 @@ p.quote {
         display: flex;
         align-items: center;
     }
+	header {
+    display: flex;
+    justify-content: center; /* centre horizontalement */
+    /* align-items: center; si vous voulez aussi centrer verticalement */
+}
+header img {
+    max-width: 700px;
+    height: auto;
+}
 }
