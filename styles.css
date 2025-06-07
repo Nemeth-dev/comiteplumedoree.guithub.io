@@ -30,7 +30,7 @@ header {
     background-color: #8B5E3C; /* Brun doré foncé (brun chaud) */
     box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Ombre pour relief */
     z-index: 1000; /* Sur le reste du contenu */
-    padding: 0.5rem 1rem; /* Espacement interne */
+    padding: 1rem 1rem; /* Espacement interne */
 }
 
 /* Menu de navigation */
@@ -116,6 +116,16 @@ ul.submenu li a:hover {
 .content {
     margin: 0 auto; /* Centrage horizontal */
     width: 100%; /* Prend toute la largeur disponible */
+}
+.content h2 {
+    text-align: center;
+    color: #D4AF37;
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-shadow:
+        1px 1px 0 #999,
+        2px 2px 0 #666,
+        3px 3px 0 #333;
 }
 
 /* Section présentation dans .content */
@@ -247,11 +257,14 @@ h4 {
     margin-bottom: 20px;
 }
 
-/* Image argentée spécifique */
+/* Classe pour styliser une image avec une bordure, des dimensions fixes, et un ajustement du contenu */
 .image-argentee {
-    border: 4px solid silver; /* Bordure argentée */
-    width: 200px; /* Largeur fixe */
-    height: auto; /* Hauteur auto pour conserver aspect ratio */
+    border: 4px solid silver; /* Ajoute une bordure de 4 pixels d'épaisseur, de couleur argentée autour de l'image */
+    width: 300px;               /* Fixe la largeur de l'image à 300 pixels */
+    height: 200px;              /* Fixe la hauteur de l'image à 200 pixels */
+    object-fit: cover;          /* L'image sera recadrée pour couvrir entièrement la zone définie, évitant la déformation */
+    display: block;             /* Convertit l'image en élément de type bloc, facilitant la gestion des marges */
+    margin: 10px auto;          /* Ajoute une marge verticale de 10px et centre horizontalement l'image */
 }
 
 /* Container pour les boutons sociaux */
@@ -309,10 +322,14 @@ h4 {
 
 /* Titre du formulaire */
 h2 {
-    text-align: center; /* Centrer le texte */
-    color: #D4AF37; /* Doré */
-    margin-bottom: 20px; /* Espace inférieur */
-    font-size: 2em; /* Taille du titre */
+    text-align: center;
+    color: #D4AF37;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-shadow:
+        1px 1px 0 #999,
+        2px 2px 0 #666,
+        3px 3px 0 #333;
 }
 
 /* Formulaire */
