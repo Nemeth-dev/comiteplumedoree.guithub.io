@@ -404,11 +404,10 @@ p {
     line-height: 1.8; /* Espacement pour lecture aisée */
     color: #444; /* Couleur légèrement sombre */
     text-align: justify; /* Justification du texte */
-    /* Ajout d'une légère ombre pour relief */
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
-    hyphens: auto;
-    text-justify: inter-word;
-    word-break: break-word;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);/* Ajout d'une légère ombre pour relief */
+    hyphens: auto;/* Permet la césure automatique pour éviter les longues lignes non équilibrées. */
+    text-justify: inter-word;/* Justifie le texte en ajustant l'espacement entre les mots pour une meilleure apparence. */
+    word-break: break-word;/* Permet de couper les mots si nécessaire pour éviter le dépassement de la mise en page. */
 }
 
 /* Paragraphe d'introduction (exemple) */
