@@ -19,11 +19,11 @@ html, body {
 /* Style du header */
 header {
     background-color: #fffaf0; /* Même fond que le body, champagne léger */
-    padding: 20px; /* Espacement interne */
+    padding:0px; /* Espacement interne */
     text-align: center; /* Centrer le texte */
     color: white; /* Couleur du texte (peut sembler invisible sur fond blanc) */
     font-size: 24px; /* Taille de la police */
-    margin-top: 70px; /* Espace au-dessus, pour décaler du haut fixe */
+    margin-top: 90px; /* Espace au-dessus, pour décaler du haut fixe */
 	display: flex; /* ou block si tu préfères */
 	justify-content: center; /* pour centrer le contenu */
 	margin: 0 auto; /* pour centrer le header lui-même si sa largeur est définie */
@@ -142,7 +142,8 @@ ul.submenu li a:hover {
     width: 100%; /* Prend toute la largeur */
     box-sizing: border-box; /* Inclut paddings et marges dans la largeur */
     text-align: center; /* Centrer le texte */
-    margin-bottom: 3rem; /* Espace inférieur */
+    margin-bottom: 1rem; /* Espace inférieur */
+	margin-top: 100px; /* Espace supérieur */
 }
 
 /* Titre dans intro */
