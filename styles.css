@@ -332,7 +332,7 @@ h4 {
     width: 100%; /* Prend toute la largeur disponible */
     box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Ombre légère */
     margin: auto; /* Centrage horizontal et vertical */
-    margin-top: 80px; /* Espace au-dessus */
+    margin-top: 100px; /* Espace au-dessus */
 }
 
 /* Titre du formulaire */
@@ -648,6 +648,19 @@ p.quote {
     height: auto;           /* Maintient les proportions originales */
     display: block;         /* Évite les espaces en ligne */
     object-fit: contain;    /* Optionnel : pour s'assurer que l'image reste complète dans le conteneur sans déformation */
-    max-height: 100%;       /* Pour limiter la hauteur si nécessaire */
+    max-height: 100%;       /* Pour limiter la hauteur si nécessaire */	
+}
+
+/* Conteneur du formulaire de contact */
+.contact-container {
+    background-color: #8B5E3C; /* Brun chaud */
+    color: #D4AF37; /* Doré */
+    padding: 40px; /* Padding interne */
+    border-radius: 10px; /* Coins arrondis */
+    max-width: 370px; /* Largeur maximale */
+    width: 100%; /* Prend toute la largeur disponible */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Ombre légère */
+    margin: auto; /* Centrage horizontal et vertical */
+    margin-top: 120px; /* Espace au-dessus */
 }
 }
