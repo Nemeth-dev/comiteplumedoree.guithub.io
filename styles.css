@@ -24,6 +24,11 @@ header {
     color: white; /* Couleur du texte (peut sembler invisible sur fond blanc) */
     font-size: 24px; /* Taille de la police */
     margin-top: 70px; /* Espace au-dessus, pour décaler du haut fixe */
+	display: flex; /* ou block si tu préfères */
+	justify-content: center; /* pour centrer le contenu */
+	margin: 0 auto; /* pour centrer le header lui-même si sa largeur est définie */
+	width: 80%; /* ou une autre largeur appropriée */
+    max-width: 1200px; /* limite la largeur pour éviter qu'il ne s'étende trop */
 }
 
 /* Bandeau fixe en haut de la page */
@@ -630,11 +635,16 @@ p.quote {
     }
 	header {
     display: flex;
-    justify-content: center; /* centre horizontalement */
-    /* align-items: center; si vous voulez aussi centrer verticalement */
-}
-header img {
-    max-width: 650px;
+    flex-direction: column; /* pour empiler verticalement si besoin */
+    align-items: center; /* pour centrer horizontalement */
+    justify-content: center; /* pour centrer verticalement si nécessaire */
+    margin-top: 0; /* supprimer ou ajuster si besoin */
+    padding: 10px; /* éventuellement ajouter padding */
+    text-align: center; /* centrer le texte */
+  }
+  /* Si tu as une image ou autre contenu dans le header, ajuste aussi */
+  header img {
+    max-width: 100%;
     height: auto;
-}
+  }
 }
