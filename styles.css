@@ -11,7 +11,9 @@ body {
     flex-direction: column; /* Disposition verticale des éléments */
     min-height: 100vh; /* Hauteur minimale : toute la fenêtre */
 }
-
+html, body {
+  overflow-x: hidden;
+}
 /* Style du header */
 header {
     background-color: #fffaf0; /* Même fond que le body, champagne léger */
@@ -461,6 +463,9 @@ p.quote {
 
 /* Responsive pour écrans jusqu'à 768px */
 @media(max-width: 768px) {
+	html, body {
+    overflow-x: hidden;
+}	
     /* La section livres devient colonne (verticale) */
     .livres {
         flex-direction: column;
