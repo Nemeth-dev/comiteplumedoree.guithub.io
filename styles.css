@@ -13,6 +13,8 @@ body {
 }
 html, body {
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 /* Style du header */
 header {
@@ -267,6 +269,12 @@ h4 {
     object-fit: cover;          /* L'image sera recadrée pour couvrir entièrement la zone définie, évitant la déformation */
     display: block;             /* Convertit l'image en élément de type bloc, facilitant la gestion des marges */
     margin: 10px auto;          /* Ajoute une marge verticale de 10px et centre horizontalement l'image */
+}
+
+  img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Container pour les boutons sociaux */
