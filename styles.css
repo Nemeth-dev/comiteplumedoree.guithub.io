@@ -218,7 +218,7 @@ footer {
     width: 100%; /* Toute la largeur */
     background-color: #141414; /* Couleur sombre */
     padding: 5px 0; /* Padding vertical */
-    margin-top: 20px; /* Espace au-dessus */
+    margin-top: 40px; /* Espace au-dessus */
     display: flex; /* Flexbox */
     flex-direction: column; /* Disposition verticale */
     align-items: center; /* Centrer contenu horizontal */
@@ -333,6 +333,15 @@ h4 {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Ombre légère */
     margin: auto; /* Centrage horizontal et vertical */
     margin-top: 100px; /* Espace au-dessus */
+}
+
+/* Taille par défaut pour le textarea */
+textarea {
+  font-size: 1.2em; /* Taille de police plus grande pour tout le site */
+  padding: 15px; /* Padding augmentée pour confort */
+  height: 150px; /* Hauteur initiale */
+  width: 100%; /* Prend toute la largeur du conteneur */
+  box-sizing: border-box; /* Inclus padding et border dans la largeur */
 }
 
 /* Titre du formulaire */
@@ -663,4 +672,9 @@ p.quote {
     margin: auto; /* Centrage horizontal et vertical */
     margin-top: 120px; /* Espace au-dessus */
 }
+
+textarea {
+    font-size: 1.4em; /* Plus gros pour mobile, pour faciliter la lecture et la saisie */
+    height: 180px; /* Ajustement de la hauteur pour mobile */
+}	
 }
