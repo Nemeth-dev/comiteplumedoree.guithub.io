@@ -27,7 +27,7 @@ header {
 	display: flex; /* ou block si tu préfères */
 	justify-content: center; /* pour centrer le contenu */
 	margin: 0 auto; /* pour centrer le header lui-même si sa largeur est définie */
-	width: 80%; /* ou une autre largeur appropriée */
+	width: 65%; /* ou une autre largeur appropriée */
     max-width: 1200px; /* limite la largeur pour éviter qu'il ne s'étende trop */
 }
 
@@ -501,7 +501,7 @@ p.quote {
     
     /* Padding pour intro */
     .intro {
-        padding: 20px;
+        padding: 0 20px; /* 0 en haut et en bas, 20px à gauche et à droite */
         box-sizing: border-box; /* Inclure paddings dans la largeur */
     }
     /* Taille du titre dans intro réduit pour mobile */
@@ -649,8 +649,10 @@ p.quote {
     align-items: center; /* pour centrer horizontalement */
     justify-content: center; /* pour centrer verticalement si nécessaire */
     margin-top: 0; /* supprimer ou ajuster si besoin */
-    padding: 10px; /* éventuellement ajouter padding */
+    padding: 0px; /* éventuellement ajouter padding */
     text-align: center; /* centrer le texte */
+	margin-top: 0;
+    margin-bottom: 0;
   }
 
     header img {
@@ -659,6 +661,8 @@ p.quote {
     display: block;         /* Évite les espaces en ligne */
     object-fit: contain;    /* Optionnel : pour s'assurer que l'image reste complète dans le conteneur sans déformation */
     max-height: 100%;       /* Pour limiter la hauteur si nécessaire */	
+	margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* Conteneur du formulaire de contact */
