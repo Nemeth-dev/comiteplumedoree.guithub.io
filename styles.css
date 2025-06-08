@@ -642,9 +642,12 @@ p.quote {
     padding: 10px; /* éventuellement ajouter padding */
     text-align: center; /* centrer le texte */
   }
-  /* Si tu as une image ou autre contenu dans le header, ajuste aussi */
-  header img {
-    max-width: 100%;
-    height: auto;
-  }
+
+    header img {
+    max-width: 670px;        
+    height: auto;           /* Maintient les proportions originales */
+    display: block;         /* Évite les espaces en ligne */
+    object-fit: contain;    /* Optionnel : pour s'assurer que l'image reste complète dans le conteneur sans déformation */
+    max-height: 100%;       /* Pour limiter la hauteur si nécessaire */
+}
 }
