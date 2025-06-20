@@ -593,7 +593,7 @@ hr {
         top: calc(100% + 20px); /* Juste en dessous du burger */
         right: 20px; /* Aligné à droite */
         width: 250px; /* Largeur du menu */
-        background-color: #8B5E3C; /* Couleur du menu */
+        background-color: #976a28; /* Brun dorée chaud */
         box-shadow: 0 2px 8px rgba(0,0,0,0.5); /* Ombre */
         display: none; /* Caché par défaut */
         border-radius: 4px; /* Coins arrondis */
