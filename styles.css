@@ -36,7 +36,7 @@ header {
     position: fixed; /* Fixe en haut de la fenêtre */
     top: 0; /* Position en haut */
     width: 100%; /* Prend toute la largeur */
-    background-color: #8B5E3C; /* Brun doré foncé (brun chaud) */
+    background-color: #976a28; /* Brun dorée chaud */
     box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Ombre pour relief */
     z-index: 1000; /* Sur le reste du contenu */
     padding: 1rem 1rem; /* Espacement interne */
@@ -66,7 +66,7 @@ ul.menu li {
 /* Liens du menu */
 ul.menu li a {
     text-decoration: none; /* Pas de soulignement */
-    color: #D4AF37; /* Doré */
+    color:#FFFFFF; /* blanc */
     font-weight: bold; /* Gras */
     padding: 8px 12px; /* Espacement autour du texte */
     transition: background 0.3s, color 0.3s; /* Transition douce pour hover */
@@ -85,7 +85,7 @@ ul.menu li ul.submenu {
     position: absolute; /* Positionnement absolu par rapport au li parent */
     top: 30px; /* Position verticale par rapport au parent */
     left: 0; /* Aligné à gauche du parent */
-    background-color: #8B5E3C; /* Même couleur que le bandeau */
+    background-color: #976a28; /* Brun dorée chaud */
     box-shadow: 0 2px 8px rgba(0,0,0,0.5); /* Ombre pour relief */
     list-style: none; /* Pas de puces */
     padding: 0; /* Pas de padding */
@@ -183,7 +183,7 @@ text-align: center;/* Aligne le texte au centre */
 }
 
 .card {
-  background-color: #8B5E3C;
+  background-color: #976a28; /* Brun dorée chaud */
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.7);
   width: 100%;
@@ -200,7 +200,7 @@ text-align: center;/* Aligne le texte au centre */
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.9);
-  background-color: #A56F4A;
+  background-color: #b07b3b; /* Maron orangé plus clair */
 }
 
 /* Style pour la carte large (3ème) */
@@ -227,7 +227,7 @@ text-align: center;/* Aligne le texte au centre */
 /* Pied de page */
 footer {
     width: 100%; /* Toute la largeur */
-    background-color: #8B5E3C; /* Brun doré foncé (brun chaud) */
+    background-color: #976a28; /* Brun dorée chaud */
     padding: 5px 0; /* Padding vertical */
     margin-top: 40px; /* Espace au-dessus */
     display: flex; /* Flexbox */
@@ -337,7 +337,7 @@ h4 {
 
 /* Conteneur du formulaire de contact */
 .contact-container {
-    background-color: #8B5E3C; /* Brun chaud */
+    background-color: #976a28; /* Brun dorée chaud */
     color: #D4AF37; /* Doré */
     padding: 40px; /* Padding interne */
     border-radius: 10px; /* Coins arrondis */
@@ -643,7 +643,7 @@ hr {
         top: 0; /* Positionné par rapport à son parent */
         right: 60px; /* Ajusté selon besoin */
         width: 200px;
-        background-color: #8B5E3C;
+        background-color: #976a28; /* Brun dorée chaud */
         box-shadow: 0 2px 8px rgba(0,0,0,0.5);
         display: none; /* Peut être modifié pour toujours visible si souhaité */
         z-index: 1002;
@@ -723,7 +723,7 @@ hr {
 
 /* Conteneur du formulaire de contact */
 .contact-container {
-    background-color: #8B5E3C; /* Brun chaud */
+    background-color: #976a28; /* Brun dorée chaud */
     color: #D4AF37; /* Doré */
     padding: 40px; /* Padding interne */
     border-radius: 10px; /* Coins arrondis */
