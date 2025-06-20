@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, follow" />
-    <title>Comité plume doréé</title>
-	<meta name="keywords" content="plume dorée, comité, romans policiers français, histoires, offrir" />
+    <title>Comité plume dorée</title>
+    <meta name="keywords" content="plume dorée, comité, romans policiers français, histoires, offrir" />
     
     <!-- Métadonnées de base -->
     <meta name="description" content="Découvrez l'univers de Daniel Iglesias : polars percutants, mystères sombres, âmes torturées. Plongez dans Overdose d'amour, Enseigner en saignant, À la mémoire du crime, et bien plus." />
@@ -38,29 +38,27 @@
 <body>
     <!-- Bandeau fixe en haut -->
     <div class="bandeau">
-	    <!-- Bouton burger -->
-  <div class="burger-menu" id="burger" aria-label="Menu" role="button" tabindex="0">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
+        <!-- Bouton burger -->
+        <div class="burger-menu" id="burger" aria-label="Menu" role="button" tabindex="0">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
         <nav>
             <!-- Menu -->
-  <div class="menu-drawer" id="menuDrawer">
-    <ul class="menu">
-      <li><a href="index.html">Accueil</a></li>
-      <li>
-        <a href="conseils.html">Conseils</a>
-      </li>
-      <li>
-        <a href="#">Services</a>
-        <ul class="submenu">
-		  <li><a href="offrir_une_histoire.html">Offrir une histoire</a></li>
-        </ul>
-      </li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
+            <div class="menu-drawer" id="menuDrawer">
+                <ul class="menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="conseils.html">Conseils</a></li>
+                    <li>
+                        <a href="#">Services</a>
+                        <ul class="submenu">
+                            <li><a href="offrir_une_histoire.html">Offrir une histoire</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </div>
 
@@ -69,17 +67,19 @@
         <!-- Introduction -->
         <section class="intro">
             <header>
-                         <img src="images/header.png" alt="Logo" style="height:400px;">
-                </header>
-	   <div class="content h2">
-  <h2>Offrez une histoire</h2><br>
-</div>		
-    <!-- Section livres -->
-        <section id="livres" class="livres">
-            <!-- Livre 1 -->
-            <div class="card" id="livre1">
+                <img src="images/header.png" alt="Logo" style="height:400px;">
+            </header>
+            <div class="content h2">
+                <h2>Offrez une histoire</h2>
+            </div>
+        </section>
+
+        <!-- Section regroupant les cartes -->
+        <section class="cards-section">
+            <!-- Card 1 -->
+            <div class="card card-large" id="carte1">
                 <div class="description">
-                    <h4>Pack "Votre Histoire en Roman":</h4>
+                    <h4>"Votre Histoire en Roman":</h4>
                     <p>Nos écrivains dédient leurs talents à donner corps à votre vision. Que ce soit une histoire familiale, un récit de vie inspirant, une fiction que vous imaginez, ou tout autre thème, nous rédigeons un roman captivant d'environ 150 pages.
                        Ce service inclut la collaboration pour définir l'intrigue et les personnages, la phase de rédaction, et les premières relectures pour s'assurer que le roman corresponde parfaitement à vos attentes.</p>
                     <p>Coût du service d'écriture et de création: 200 €<br><br>
@@ -93,54 +93,91 @@
                     </p>
                 </div>
             </div>
-            <!-- Livre 2 -->
-            <div class="card" id="livre2">
+
+            <!-- Card 2 -->
+            <div class="card card-large" id="carte2">
                 <div class="description">
-                    <h4>Ce que comprend votre commande:</h4>
-                    <p>Un livre relié et illustré* (20 à 30 pages)<br>
-                       L’histoire entièrement personnalisée avec* :<br>
-                       Le prénom de l’enfant
-					   Son apparence physique(cheveux, yeux…)
-					   Ses centres d’intérêt(animaux, sport, passions…)
-					   Des personnages secondaires (famille, amis…)
-                       Un lieu d’aventure inspiré de son monde réel ou imaginaire
-                       Une dédicace personnalisée offerte</p>
-                    <p>Tarif:
-                       À partir de 29,90 €*
-					   (Livraison standard incluse – Options premium disponibles)</p>
-                    <p><u>Options supplémentaires (en supplément):</u>
-                       Couverture rigide: +5 €
-                       Ajout de photos de l’enfant: 
-					   Version numérique en PDF: +4 €
-					   Emballage cadeau: +2 €
-                    </p>
+                    <h4>Livre Personnalisé pour Enfants</h4>
+                    <p>Offrez un livre magique où votre enfant devient le héros de sa propre histoire !
+                       Grâce à notre service de personnalisation, chaque livre est unique, illustré et adapté aux goûts de votre enfant.</p>
+                       <u>Ce que comprend votre commande:</u><br><br>
+                       - Un livre relié et illustré (20 à 30 pages)
+                       - L’histoire entièrement personnalisée avec:
+                       <ul class="custom-list">
+                         <li>Le prénom de l’enfant</li>
+                         <li>Son apparence physique (cheveux, yeux…)</li>
+                         <li>Ses centres d’intérêt (animaux, sport, passions…)</li>
+                         <li>Des personnages secondaires (famille, amis…)</li>
+                         <li>Un lieu d’aventure inspiré de son monde réel ou imaginaire</li>
+                         <li>Une dédicace personnalisée offerte</li>
+                       </ul>
+                       <p><u>Tarif:</u></p>
+                       À partir de 29,90 €<br>
+                       (Livraison standard incluse – Options premium disponibles)<br><br>
+                       <p><u>Options supplémentaires (en supplément):</u></p>
+                       <ul class="custom-list">
+                         <li>Couverture rigide: +5 €</li>
+                         <li>Ajout de photos de l’enfant: +3 €</li>
+                         <li>Version numérique en PDF: +4 €</li>
+                         <li>Emballage cadeau: +2 €</li>
+                       </ul>
+                       <p><u>Comment commander ?</u></p>
+                       <ol>
+                         <li>Remplissez notre formulaire de personnalisation* en ligne (prénom, centres d’intérêt, etc.)</li>
+                         <li>Choisissez vos options supplémentaires</li>
+                         <li>Recevez une prévisualisation gratuite avant impression</li>
+                         <li>Recevez votre livre chez vous en 7 à 10 jours ouvrés</li>
+                       </ol>
+                       <p><i>Garantie 100 % satisfaction</i></p><br>
+                       <p>Nous ajustons gratuitement votre livre si vous n’êtes pas entièrement satisfait de la première version.</p>
+                    </div>
                 </div>
-            </div>
-            <!-- Livre 3 -->
-            <div class="card" id="livre3">
+            <!-- Card 3 -->
+            <div class="card card-large" id="carte3">
                 <div class="description">
                     <h4>Ce que comprend votre commande:</h4>
-                    <p>Un livre relié et illustré (20 à 30 pages)<br>
-                       L’histoire entièrement personnalisée avec* :<br>
-                       Le prénom de l’enfant
-					   Son apparence physique(cheveux, yeux…)
-					   Ses centres d’intérêt(animaux, sport, passions…)
-					   Des personnages secondaires (famille, amis…)
-                       Un lieu d’aventure inspiré de son monde réel ou imaginaire
-                       Une dédicace personnalisée offerte</p>
-                    <p>Tarif:
-                       À partir de 29,90 €*
-					   (Livraison standard incluse – Options premium disponibles)</p>
-                    <p><u>Options supplémentaires (en supplément):</u>
-                       Couverture rigide: +5 €
-                       Ajout de photos de l’enfant: 
-					   Version numérique en PDF: +4 €
-					   Emballage cadeau: +2 €
-                    </p>
+                    <p>Formule d’Achat – Roman Personnalisé sur Mesure*</p>
+                    <p>*Transformez une vie, un amour, une passion… en une histoire à lire comme un vrai roman !*</p>
+                    <p>Idéal pour un anniversaire, un mariage, la Saint-Valentin, un départ à la retraite ou tout simplement pour faire plaisir.</p>
+                    <hr>
+                    <h4>Ce que comprend votre commande :</h4>
+                    <ul>
+                        <li>Un <strong>roman de 60 à 120 pages</strong>, entièrement rédigé à partir de votre histoire ou de vos choix</li>
+                        <li>Une <strong>personnalisation complète</strong> :
+                            <ul>
+                                <li>Prénoms et traits de caractère des personnages</li>
+                                <li>Style de narration au choix (romantique, aventure, comique, thriller…)</li>
+                                <li>Lieux réels ou fictifs</li>
+                                <li>Détails personnels (rencontres, événements vécus, passions, messages secrets…)</li>
+                            </ul>
+                        </li>
+                        <li>Une <strong>dédicace personnalisée</strong> offerte en première page</li>
+                        <li><strong>Couverture souple ou rigide illustrée</strong></li>
+                    </ul>
+                    <h4>Tarif :</h4>
+                    <p>À partir de 89,00 € (Version imprimée + version numérique incluse)</p>
+                    <h4>Options supplémentaires :</h4>
+                    <ul>
+                        <li>Couverture rigide premium : +10 €</li>
+                        <li>Ajout de photos (intégrées dans le livre) : +7 €</li>
+                        <li>Boîte cadeau personnalisée : +6 €</li>
+                        <li>Traduction en anglais ou autre langue : +15 €</li>
+                        <li>Édition express (5 jours ouvrés) : +20 €</li>
+                    </ul>
+                    <h4>Comment commander ?</h4>
+                    <ol>
+                        <li>Remplissez notre <strong>formulaire de création</strong> (personnages, thème, style…)</li>
+                        <li>Choisissez vos <strong>options de présentation</strong></li>
+                        <li>Nous vous envoyons une <strong>maquette à valider</strong></li>
+                        <li>Après validation, vous recevez votre roman en <strong>10 à 15 jours ouvrés</strong></li>
+                    </ol>
+                    <p><strong>Garantie Création Unique</strong></p>
+                    <p>Chaque roman est écrit par un auteur professionnel. Aucun contenu préfabriqué. Vous êtes libre de modifier l’histoire avant impression.</p>
                 </div>
             </div>
         </section>
-     </div>		
+    </div>
+
     <!-- Pied de page -->
     <footer id="footer">
         <p>&copy; 2025 comiteplumedoree.ddns.net<br> Tous droits réservés. Design et contenu crée par<br><i> le Comité Plume dorée.</i></p>
@@ -156,22 +193,23 @@
             </a>
         </div>
     </footer>
-	<script>
-  document.addEventListener('DOMContentLoaded', () => {
-  const burger = document.getElementById('burger');
-  const menuDrawer = document.getElementById('menuDrawer');
 
-  burger.addEventListener('click', () => {
-    menuDrawer.classList.toggle('active');
-  });
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const burger = document.getElementById('burger');
+            const menuDrawer = document.getElementById('menuDrawer');
 
-  // Fermer si clic en dehors
-  document.addEventListener('click', (e) => {
-    if (!menuDrawer.contains(e.target) && !burger.contains(e.target)) {
-      menuDrawer.classList.remove('active');
-    }
-  });
-});
-</script>
+            burger.addEventListener('click', () => {
+                menuDrawer.classList.toggle('active');
+            });
+
+            // Fermer si clic en dehors
+            document.addEventListener('click', (e) => {
+                if (!menuDrawer.contains(e.target) && !burger.contains(e.target)) {
+                    menuDrawer.classList.remove('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

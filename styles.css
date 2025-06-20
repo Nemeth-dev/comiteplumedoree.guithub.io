@@ -161,41 +161,47 @@ ul.submenu li a:hover {
     color: black; /* Noir */
 }
 
-/* Section livres, affichage flex pour mise en page en grille */
-.livres {
+/* Section packs, affichage flex pour mise en page en grille */
+.packs {
     display: flex; /* Flexbox */
     flex-wrap: wrap; /* Permet de passer à la ligne */
     gap: 20px; /* Espacement entre cartes */
     justify-content: center; /* Centrer horizontalement */
 }
 
-/* Carte d'un livre */
+/* Style des cartes en index.html */
+.cards-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
 .card {
-    background-color: #8B5E3C; /* Brun chaud */
-    border-radius: 8px; /* Coins arrondis */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.7); /* Ombre pour effet 3D */
-    width: 320px; /* Largeur fixe */
-    display: flex; /* Flexbox pour aligner contenu vertical */
-    flex-direction: column; /* Disposition verticale */
-    align-items: center; /* Centrer horizontalement */
-    padding: 15px; /* Padding intérieur */
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Transitions pour effets au survol */
+  background-color: #8B5E3C;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  box-sizing: border-box;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
-/* Effet au survol de la carte */
+/* Effet au survol des cartes */
 .card:hover {
-    transform: translateY(-5px); /* Légère élévation */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.9); /* Ombre plus accentuée */
-    background-color: #A56F4A; /* Nuance plus claire au survol */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.9);
+  background-color: #A56F4A;
 }
 
-/* Couverture du livre */
-.cover {
-    width: 100%; /* Prend toute la largeur du container */
-    height: auto; /* Maintient l'aspect ratio */
-    border-radius: 4px; /* Coins arrondis */
-    margin-bottom: 15px; /* Espace en dessous */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.5); /* Ombre */
+/* Style pour la carte large (3ème) */
+.card-large {
+  max-width: 400px; /* ou la dimension souhaitée */
 }
 
 /* Description du livre */
@@ -210,24 +216,26 @@ ul.submenu li a:hover {
 }
 
 .description p {
-    font-size: 0.95rem; /* Taille du texte */
+    font-size: 16px; /* Taille du texte */
     color: #ccc; /* Gris clair */
 }
 
 /* Pied de page */
 footer {
     width: 100%; /* Toute la largeur */
-    background-color: #141414; /* Couleur sombre */
+    background-color: #8B5E3C; /* Brun doré foncé (brun chaud) */
     padding: 5px 0; /* Padding vertical */
     margin-top: 40px; /* Espace au-dessus */
     display: flex; /* Flexbox */
     flex-direction: column; /* Disposition verticale */
     align-items: center; /* Centrer contenu horizontal */
+	color: #fffaf0!important; /* Couleur champagne léger */
 }
 
 /* Paragraphe dans le footer */
 footer p {
     text-align: center; /* Centrer le texte */
+	color: #fffaf0!important; /* Couleur champagne léger */
 }
 
 /* Définition d'une police personnalisée pour titres */
@@ -472,6 +480,47 @@ p.quote {
     transition: 0.3s; /* Transition pour effet */
 }
 
+/* *******************************
+   ul et li - puces personalisés
+   ******************************** */
+
+/* Suppression des puces par défaut et retrait pour la liste personnalisée */
+ul.custom-list {
+  list-style: none; /* Supprime les puces par défaut */
+  padding-left: 0; /* Supprime le retrait par défaut */
+}
+
+/* Styles pour chaque élément de la liste */
+ul.custom-list li {
+  position: relative; /* Nécessaire pour positionner la pseudo-élément */
+  padding-left: 20px; /* Espace pour la puce personnalisée */
+  margin-bottom: 10px; /* Espacement entre les éléments */
+  text-align: justify; /* Texte justifié */
+  -webkit-hyphens: auto; /* Césure automatique pour Webkit */
+  -moz-hyphens: auto; /* Césure automatique pour Firefox */
+  hyphens: auto; /* Césure automatique pour autres navigateurs */
+  word-wrap: break-word; /* Permet de couper les mots si nécessaire */
+}
+
+/* La puce ronde vide (cercle creux) personnalisée */
+ul.custom-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px; /* Taille de la puce */
+  height: 6px;
+  border: 2px solid #D4AF37; /* Couleur dorée de la bordure */
+  border-radius: 50%; /* Forme ronde */
+  background-color: transparent; /* Fond transparent pour l'effet creux */
+}
+
+ ol {
+    text-align: left;
+  }
+
+
 /* ------------------------------------------- FIN DES STYLES GLOBAUX ------------------------------------------- */
 
 /* =========================== STYLES RESPONSIVE (pour mobiles et petits écrans) =========================== */
@@ -489,12 +538,8 @@ p.quote {
 	html, body {
     overflow-x: hidden;
 }	
-    /* La section livres devient colonne (verticale) */
-    .livres {
-        flex-direction: column;
-        align-items: center;
-    }
-    /* Les cartes des livres s'adaptent en largeur */
+
+    /* Les cartes s'adaptent en largeur */
     .card {
         width: 90%;
     }
