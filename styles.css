@@ -137,6 +137,10 @@ ul.submenu li a:hover {
         3px 3px 0 #333;
 }
 
+.content p {
+text-align: center;/* Aligne le texte au centre */
+}
+
 /* Section présentation dans .content */
 .intro {
     width: 100%; /* Prend toute la largeur */
@@ -520,7 +524,14 @@ ul.custom-list li::before {
     text-align: left;
   }
 
-
+hr {
+  /* Supprimer le style par défaut */
+  border: none;
+  height: 2px; /* Ajustez la hauteur selon votre besoin */
+  background-color: #D4AF37; /* Doré */
+  width: 75%; /* ou la largeur souhaitée */
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+  }
 /* ------------------------------------------- FIN DES STYLES GLOBAUX ------------------------------------------- */
 
 /* =========================== STYLES RESPONSIVE (pour mobiles et petits écrans) =========================== */
