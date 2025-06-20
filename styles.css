@@ -682,7 +682,7 @@ hr {
         top: calc(100% + 20px);
         right: 20px;
         width: 250px;
-        background-color: #8B5E3C;
+        background-color: #976a28; /* Brun dorée chaud */
         box-shadow: 0 2px 8px rgba(0,0,0,0.5);
         display: none; /* Caché par défaut */
         border-radius: 4px;
